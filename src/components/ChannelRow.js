@@ -1,9 +1,27 @@
 import React from "react";
+import "../css/ChannelRow.css";
+import { Avatar } from "@material-ui/core";
+import VerifiedIcon from "@material-ui/icons/CheckCircleOutlineOutlined";
 
-function ChannelRow() {
+function ChannelRow({
+  image,
+  channel,
+  subs,
+  noOfVideos,
+  description,
+  verified,
+}) {
   return (
-    <div>
-      <h1>Channel Row</h1>
+    <div className="channelRow">
+      <Avatar className="channelRow__logo" alt={channel} src={image} />
+      <div className="channelRow__text">
+        <h4>{channel}</h4>
+        {verified && <VerifiedIcon />}
+        <p>
+          {subs} subscribers • {noOfVideos} videos
+        </p>
+        <p>{description}</p>
+      </div>
     </div>
   );
 }
