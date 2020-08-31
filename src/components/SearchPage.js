@@ -1,10 +1,14 @@
 import React from "react";
+import TuneOutlinedIcon from "@material-ui/icons/TuneOutlined";
 import "../css/SearchPage.css";
 
 function SearchPage() {
   return (
     <div className="searchPage">
-      <h1>Search results</h1>
+      <div className="searchPage__filter">
+        <TuneOutlinedIcon />
+        <h2>FILTER</h2>
+      </div>
     </div>
   );
 }
